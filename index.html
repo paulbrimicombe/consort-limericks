@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="Description"
+      content="Limericks for the Rex Factor podcast English Consorts series"
+    />
+    <title>Consort Limericks</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1><span>Consort Limericks</span></h1>
+        <div id="subject-selection">
+          <label for="subject">Subject:</label>
+          <input id="subject" list="subjects" type="text" />
+          <datalist id="subjects"> </datalist>
+        </div>
+      </header>
+      <section id="limerick">
+        <h2><span id="subject-title"></span></h2>
+        <div id="limerick-text"></div>
+      </section>
+      <section id="back-forward" style="visibility: hidden">
+        <a id="previous">Previous</a>
+        <a id="next">Next</a>
+      </section>
+    </main>
+    <script src="./index.mjs" type="module"></script>
+  </body>
+</html>

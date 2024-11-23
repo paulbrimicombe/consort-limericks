@@ -1,0 +1,143 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: Quintessential, cursive;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+
+  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  max-width: 40em;
+  width: calc(100% - 2em);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1em;
+}
+
+a {
+  text-decoration-color: #0009;
+  color: #0009;
+}
+
+a:hover {
+  text-decoration-color: #000;
+  color: #000;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+#subject-selection {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  line-height: 1;
+}
+
+h1 {
+  font-size: var(--fs-lg);
+  margin: 0.4em 0 0.4em 0;
+  padding-bottom: 0.1em;
+  border-bottom: 2px solid grey;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--fs-md);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+h1::before,
+h2::before {
+  content: "𐡷";
+  padding-right: 0.2em;
+  font-weight: normal;
+}
+
+h1::after,
+h2::after {
+  content: "𐡸";
+  padding-left: 0.2em;
+  font-weight: normal;
+}
+
+#limerick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-family: Quintessential, cursive;
+  visibility: hidden;
+  max-width: 40em;
+  padding: 1em;
+  align-self: center;
+  background-image: url(card.jpg);
+  background-blend-mode: multiply;
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px;
+}
+
+#limerick-text {
+  display: flex;
+  font-size: var(--fs-base);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3em;
+  text-align-last: right;
+}
+
+#back-forward {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1em;
+  visibility: hidden;
+}
+
+a#previous,
+a#next {
+  position: relative;
+}
+
+a#previous::before {
+  content: "☚";
+  position: absolute;
+  transform: translate(-100%, 0);
+  padding-right: 0.2em;
+  text-decoration: none;
+}
+
+a#next::after {
+  content: "☛";
+  position: absolute;
+  transform: translate(100%, 0);
+  right: 0;
+  padding-left: 0.2em;
+  text-decoration: none;
+}

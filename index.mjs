@@ -124,14 +124,18 @@ window.addEventListener("load", () => {
   const preselectedSubject = searchParams.get("subject");
 
   if (preselectedSubject) {
-    subjectSelector.value = preselectedSubject;
-
     const limerick = limericks.find(
       (limerick) => formatTitle(limerick) === preselectedSubject
     );
 
     if (limerick) {
+      subjectSelector.value = preselectedSubject;
       updateLimerick(limerick);
     }
+  } else {
+    const randomIndex = Math.round(Math.random() * (limericks.length - 1));
+    const limerick = limericks[randomIndex];
+    subjectSelector.value = formatTitle(limerick);
+    updateLimerick(limerick);
   }
 });

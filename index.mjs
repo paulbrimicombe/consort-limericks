@@ -50,7 +50,7 @@ for (const limerick of limericks) {
  */
 const createLink = (limerick) => {
   const searchParams = new URLSearchParams();
-  searchParams.set("subject", formatTitle(limerick));
+  searchParams.set("subject", limerick.id);
   return `./?${searchParams.toString()}`;
 };
 
@@ -94,7 +94,7 @@ const updateLimerick = (limerick) => {
   backForwardSection.style.visibility = "visible";
 };
 
-subjectSelector.addEventListener("change", (event) => {
+subjectSelector.addEventListener("change", () => {
   const selected = subjectSelector.value;
 
   if (!selected) {
@@ -110,7 +110,7 @@ subjectSelector.addEventListener("change", (event) => {
   }
 
   const searchParams = new URLSearchParams();
-  searchParams.set("subject", selected);
+  searchParams.set("subject", limerick.id);
   const newHref = `./?${searchParams.toString()}`;
 
   if (!window.location.href.endsWith(newHref)) {
@@ -130,11 +130,11 @@ window.addEventListener("load", () => {
 
   if (preselectedSubject) {
     const limerick = limericks.find(
-      (limerick) => formatTitle(limerick) === preselectedSubject
+      (limerick) => limerick.id === preselectedSubject
     );
 
     if (limerick) {
-      subjectSelector.value = preselectedSubject;
+      subjectSelector.value = formatTitle(limerick);
       updateLimerick(limerick);
     }
   } else {

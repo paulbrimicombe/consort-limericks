@@ -1,3 +1,3 @@
-# Picture to colouring page
+# Consort limericks
 
-_A static website to convert pictures into printable colouring pages._
+_A website for Rex Factor Podcast limericks._

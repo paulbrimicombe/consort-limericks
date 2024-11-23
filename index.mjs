@@ -106,7 +106,7 @@ subjectSelector.addEventListener("change", (event) => {
 
   const searchParams = new URLSearchParams();
   searchParams.set("subject", selected);
-  const newHref = `/?${searchParams.toString()}`;
+  const newHref = `./?${searchParams.toString()}`;
 
   if (!window.location.href.endsWith(newHref)) {
     window.location.href = newHref;

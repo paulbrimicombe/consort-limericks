@@ -49,7 +49,7 @@ for (const limerick of limericks) {
 const createLink = (limerick) => {
   const searchParams = new URLSearchParams();
   searchParams.set("subject", formatTitle(limerick));
-  return `/?${searchParams.toString()}`;
+  return `./?${searchParams.toString()}`;
 };
 
 /**

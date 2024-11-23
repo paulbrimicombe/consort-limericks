@@ -4,7 +4,6 @@ body {
   box-sizing: border-box;
   /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-family: Quintessential, cursive;
-  background-color: #fff;
   height: 100vh;
   width: 100vw;
 
@@ -21,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fffdfa;
 }
 
 main {
@@ -29,11 +29,12 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 1em;
+  gap: 2em;
+  font-size: var(--fs-base);
 }
 
 a {
-  text-decoration-color: #0009;
+  text-decoration-color: #000a;
   color: #0009;
 }
 
@@ -56,6 +57,7 @@ header {
 input {
   flex: 1;
   line-height: 1;
+  background-color: #fffdfa;
 }
 
 h1 {
@@ -96,11 +98,20 @@ h2::after {
   font-family: Quintessential, cursive;
   visibility: hidden;
   max-width: 40em;
-  padding: 1em;
-  align-self: center;
+  flex: 1;
+}
+
+.paper {
+  background-blend-mode: luminosity;
+  background-color: floralwhite;
   background-image: url(card.jpg);
-  background-blend-mode: multiply;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 }
 
 #limerick-text {
@@ -110,6 +121,7 @@ h2::after {
   align-items: flex-start;
   gap: 0.3em;
   text-align-last: right;
+  text-wrap: pretty;
 }
 
 #back-forward {
@@ -118,11 +130,13 @@ h2::after {
   width: 100%;
   padding: 0 1em;
   visibility: hidden;
+  flex: 1;
 }
 
 a#previous,
 a#next {
   position: relative;
+  font-size: var(--fs-md);
 }
 
 a#previous::before {

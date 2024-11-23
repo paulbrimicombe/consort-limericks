@@ -127,6 +127,7 @@ h2::after {
 #back-forward {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   padding: 0 1em;
   visibility: hidden;

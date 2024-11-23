@@ -111,6 +111,7 @@ h2::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: min(100%, 25em);
   gap: 1em;
 }
 

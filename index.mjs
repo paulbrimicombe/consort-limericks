@@ -30,8 +30,6 @@ const limerickText = getElementById("limerick-text", HTMLElement);
 const backForwardSection = getElementById("back-forward", HTMLElement);
 const previousLink = getElementById("previous", HTMLAnchorElement);
 const nextLink = getElementById("next", HTMLAnchorElement);
-const openGraphTitle = getElementById("og:title", HTMLMetaElement);
-const openGraphDescription = getElementById("og:description", HTMLMetaElement);
 
 /**
  * @param {Limerick} limerick
@@ -60,8 +58,6 @@ const createLink = (limerick) => {
 const updateLimerick = (limerick) => {
   const title = formatTitle(limerick);
   subjectTitle.textContent = title;
-  openGraphTitle.content = title;
-  openGraphDescription.content = limerick.text.join("\n");
 
   limerickText.innerHTML = "";
   for (const line of limerick.text) {

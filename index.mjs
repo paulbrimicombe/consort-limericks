@@ -35,7 +35,7 @@ const nextLink = getElementById("next", HTMLAnchorElement);
  * @param {Limerick} limerick
  * @returns {string}
  */
-const formatTitle = ({ name, episode }) => `${name} (${episode})`;
+const formatTitle = ({ name }) => `${name}`;
 
 for (const limerick of limericks) {
   const subjectListEntry = document.createElement("option");

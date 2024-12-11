@@ -2,8 +2,9 @@ html,
 body {
   margin: 0;
   box-sizing: border-box;
-  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  font-family: Quintessential, cursive;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+
   height: 100vh;
   width: 100vw;
 
@@ -79,14 +80,14 @@ h2 {
 
 h1::before,
 h2::before {
-  content: "𐡷";
+  /* content: "𐡷"; */
   padding-right: 0.2em;
   font-weight: normal;
 }
 
 h1::after,
 h2::after {
-  content: "𐡸";
+  /* content: "𐡸"; */
   padding-left: 0.2em;
   font-weight: normal;
 }
@@ -97,7 +98,6 @@ h2::after {
   align-items: center;
   justify-content: center;
   gap: 1em;
-  font-family: Quintessential, cursive;
   visibility: hidden;
   max-width: 40em;
   flex: 1;
@@ -144,18 +144,22 @@ a#next {
 }
 
 a#previous::before {
-  content: "☚";
+  content: "◀";
+  font-size: 0.8em;
   position: absolute;
+  bottom: 8%;
   transform: translate(-100%, 0);
   padding-right: 0.2em;
   text-decoration: none;
 }
 
 a#next::after {
-  content: "☛";
+  content: "▶";
+  font-size: 0.8em;
   position: absolute;
   transform: translate(100%, 0);
   right: 0;
+  bottom: 8%;
   padding-left: 0.2em;
   text-decoration: none;
 }

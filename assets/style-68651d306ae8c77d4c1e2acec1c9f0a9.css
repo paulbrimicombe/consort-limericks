@@ -106,7 +106,7 @@ h2::after {
 .paper {
   background-blend-mode: luminosity;
   background-color: floralwhite;
-  background-image: url(card.jpg);
+  background-image: url(card.webp);
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px;
   padding: 1em;
   display: flex;

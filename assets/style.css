@@ -8,13 +8,13 @@ body {
   height: 100vh;
   width: 100vw;
 
-  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+  --fs-sm: clamp(0.7rem, 0.35vi + 0.61rem, 0.89rem);
+  --fs-base: clamp(0.88rem, 0.57vi + 0.73rem, 1.19rem);
+  --fs-md: clamp(1.09rem, 0.89vi + 0.87rem, 1.58rem);
+  --fs-lg: clamp(1.37rem, 1.35vi + 1.03rem, 2.11rem);
+  --fs-xl: clamp(1.71rem, 2.01vi + 1.21rem, 2.81rem);
+  --fs-xxl: clamp(2.14rem, 2.93vi + 1.4rem, 3.75rem);
+  --fs-xxxl: clamp(2.67rem, 4.23vi + 1.61rem, 5rem);
 }
 
 body {
@@ -30,7 +30,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 2em;
+  gap: 1em;
   font-size: var(--fs-base);
 }
 
@@ -133,7 +133,6 @@ h2::after {
   align-items: flex-start;
   width: 100%;
   visibility: hidden;
-  flex: 1;
 }
 
 a#previous,
@@ -160,4 +159,16 @@ a#next::after {
   top: 0.4em;
   padding-left: 0.2em;
   text-decoration: none;
+}
+
+#about {
+  display: flex;
+  font-size: var(--fs-sm);
+  flex-direction: column;
+  align-self: center;
+  justify-content: flex-start;
+  max-width: max(calc(100% - 4em), 35em);
+  gap: 1em;
+  padding-bottom: 1.5em;
+  flex: 1;
 }
